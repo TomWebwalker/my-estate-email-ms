@@ -1,0 +1,15 @@
+version: "3.9"
+services:
+
+  my-estate-email-ms:
+    build:
+      context: .
+    volumes:
+    - .:/app
+    - /app/node_modules
+    command: npm run start:dev
+
+networks:
+  default:
+    name: my-net
+    external: true
